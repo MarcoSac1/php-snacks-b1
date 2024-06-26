@@ -79,6 +79,12 @@ Con un form passare come parametri GET name, mail e age e verificare (cercando i
             echo $mail;
             $age= str_replace('',$_GET['number'], $age);
             echo $age;
+
+            if (strlen($name) > 3 ) {
+                echo ' - the name is longer than 3 characters - ';
+            }elseif (str_contains ($mail , '@')) {
+                echo '- the mail is right - ';
+            }
         ?>
     </main>
 </body>
